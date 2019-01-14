@@ -1,1 +1,16 @@
-\contentsline {section}{\numberline {1}Objective}{1}
+\contentsline {section}{\numberline {1}Design Specifications and Requirements}{1}
+\contentsline {subsection}{\numberline {1.1}Performance and Constraints}{1}
+\contentsline {subsubsection}{\numberline {1.1.1}Required Speed}{1}
+\contentsline {subsubsection}{\numberline {1.1.2}Required Acceleration}{1}
+\contentsline {subsubsection}{\numberline {1.1.3}Required Accuracy and Resolution}{1}
+\contentsline {subsubsection}{\numberline {1.1.4}Allowable Overshoot}{1}
+\contentsline {subsubsection}{\numberline {1.1.5}Power Rating and Voltage Rating for Power Supply}{1}
+\contentsline {subsubsection}{\numberline {1.1.6}Overall Dimensions}{1}
+\contentsline {subsubsection}{\numberline {1.1.7}Operating Forces and Torques}{1}
+\contentsline {subsubsection}{\numberline {1.1.8}Mass and Inertia of Components in Motion}{1}
+\contentsline {subsubsection}{\numberline {1.1.9}Structural Frame Rigidity}{1}
+\contentsline {subsubsection}{\numberline {1.1.10}Expected Temperature Range}{1}
+\contentsline {subsubsection}{\numberline {1.1.11}Expected Cleanliness}{1}
+\contentsline {subsubsection}{\numberline {1.1.12}Safety Features}{1}
+\contentsline {section}{\numberline {2}Milestones and Timeline}{1}
+\contentsline {subsection}{\numberline {2.1}Project Timeline}{1}

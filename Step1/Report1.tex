@@ -42,18 +42,29 @@
 \section{Design Specifications and Requirements}
 \subsection{Performance and Constraints}
 \subsubsection{Required Speed}
+The speed at which the system operates at must be maximized in order to reduce completion time while remaining stable with minimal overshoot and high accuracy. This speed must not exceed any limits imposed by the magnetic sensor, chassis, drive train, cube transportation system or any other subsystems.
 \subsubsection{Required Acceleration}
+To provide smooth operation, acceleration will be capped at $x m/s^2$. This will ensure minimal ware on the drive train components and will reduce the probability of dropping the cube.
 \subsubsection{Required Accuracy and Resolution}
+The sensors which track the wall must have sufficient accuracy to maintain a constant distance. The magnetic cube sensor must have sufficient accuracy and range to detect when the cube is within grabbing range.
 \subsubsection{Allowable Overshoot}
+Overshoot must be kept to a minimum to prevent system crashes.
 \subsubsection{Power Rating and Voltage Rating for Power Supply}
+The Power Supply must provide sufficient power to drive the motors at the required constant speed. The Voltage must not dip or rise outside of a specified range during operation to reduce negative disturbances on the sensors and control system.
 \subsubsection{Overall Dimensions}
+Must be agile enough to navigate the course and sweep the entire area.
 \subsubsection{Operating Forces and Torques}
+Operating Forces and Torques must not exceed the specified maximums of the materials used.
 \subsubsection{Mass and Inertia of Components in Motion}
+Yes.
 \subsubsection{Structural Frame Rigidity}
+Frame must support all components used in the system.
 \subsubsection{Expected Temperature Range}
+The system must comply with the Automotive Temperature standard of $-40$ to $125$ degrees Celsius.
 \subsubsection{Expected Cleanliness}
+The system must not contaminate the environment. Possible Contaminants include Oil, Battery Acid...
 \subsubsection{Safety Features}
-
+The system must employ measures to protect human health sand safety. Ethics must be followed. 
 
 \section{Milestones and Timeline}
 \subsection{Project Timeline}
@@ -65,17 +76,17 @@
 \begin{tabular}{l |@{\foo} l}
 
 Jan. 14 & Specifications and Requirement Deliverable\\
-Jan. 21 & ?\\
-Jan. 28 & ?\\
-Feb. 04 & ?\\
+Jan. 21 & \textit{Research Applicable Senors?}\\
+Jan. 28 & \textit{Do Design?}\\
+Feb. 04 & \textit{Finalize Sensor Simulations?}\\
 Feb. 11 & Preliminary Sensor Selection Deliverable\\
-Feb. 18 & ?\\
-Feb. 25 & ?\\
-Mar. 04 & ?\\
+Feb. 18 & \textit{Research Applicable Actuators?}\\
+Feb. 25 & \textit{Do Design?}\\
+Mar. 04 & \textit{Finalize Actuator Simulations?}\\
 Mar. 11 & Preliminary Actuator Selection Deliverable\\
-Mar. 18 & ?\\
-Mar. 25 & ?\\
-Apr. 01 & Project Complete\\
+Mar. 18 & \textit{Evaluate Preliminary Sensor and Actuators?}\\
+Mar. 25 & \textit{Obtain feedback and iterate?}\\
+Apr. 01 & Finalize Final Simulations and Report\\
 
 
 \end{tabular}

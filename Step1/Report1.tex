@@ -12,6 +12,7 @@
 \usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{placeins}
+\usepackage{gensymb}
 
 \newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
 
@@ -40,42 +41,52 @@
 \setcounter{page}{1}
  
 \section{Design Specifications and Requirements}
-\subsection{Performance and Constraints}
-\subsubsection{Required Speed}
-The speed at which the system operates at must be maximized in order to reduce completion time while remaining stable with minimal overshoot and high accuracy. This speed must not exceed any limits imposed by the magnetic sensor, chassis, drive train, cube transportation system or any other subsystems. \\
+\subsection{Required Speed}
+The speed at which the system operates at must be maximized in order to reduce completion time while remaining stable with minimal overshoot and high accuracy. This speed must not exceed any limits imposed by the magnetic sensor, chassis, drive train, cube transportation system or any other subsystems.  \\
 
-The selected sensors and actuators will impose quantitative restraints on the optimal operating speed.
+The selected sensors and actuators will impose quantitative restraints on the optimal operating speed. Simulink Simulations will be conducted to determine the optimal operating speed for each sensor. The Simulation resules will be compiled together and analyzed to determine the optimal operating speed.
 
-\subsubsection{Required Acceleration}
-To provide smooth operation, acceleration will be capped at $x m/s^2$. This will ensure minimal wear on the drive train components and will reduce the probability of dropping the cube.
-\subsubsection{Required Accuracy and Resolution}
-The sensors which track the wall must have sufficient accuracy to maintain a constant distance. The magnetic cube sensor must have sufficient accuracy and range to detect when the cube is within grabbing range.
-\subsubsection{Allowable Overshoot}
-Overshoot must be kept to a minimum to prevent system crashes. The ideal response of the system is critically-damped which will yield the fastest response with zero overshoot.
-\subsubsection{Power Rating and Voltage Rating for Power Supply}
-The Power Supply must provide sufficient power to drive the motors at the required constant speed. The Voltage must not dip or rise outside of a specified range during operation to reduce negative disturbances on the sensors and control system.
-\subsubsection{Overall Dimensions}
-Must be agile enough to navigate the course and sweep the entire area. \textit{Constraints given in MSE2202B: 45 x 45 x 25 (cm)} A smaller chassis will yield more agility and allow the system to fully sweep the entire survey area. Any cubes located in the corners of the survey area present an agility challenge for the system.
-\subsubsection{Operating Forces and Torques}
+\subsection{Required Acceleration}
+To provide smooth operation, acceleration will be kept to a minimum to reduce any transient effects on the system. This will ensure minimal wear on the drive train components and will reduce the probability of dropping the cube. 
+\subsection{Required Accuracy and Resolution}
+The sensors which track the wall must have sufficient accuracy to maintain a constant distance. The magnetic cube sensor must have sufficient accuracy and range to detect when the cube is within grabbing range. Resolution of all sensors will need to be sufficiently high to ensure that false-positives are avoided when locating the cube and pyramid, as well as tracking the will with minimal steady-state error.  
+\subsection{Allowable Overshoot}
+The ideal response of the system is critically-damped which will yield the fastest response with zero overshoot. However, if overshoot becomes a necessity, it must be kept to a minimum to preserve system stability. A PID controller will be investigated to help minimize the system's overshoot.
+\subsection{Power Rating and Voltage Rating for Power Supply}
+The Power Supply must provide sufficient power to drive the motors at the required constant speed. The Voltage must not dip or rise outside of a specified range during operation to reduce negative disturbances on the sensors and control system. A large factor of safety will be included witht the power supply to reduce stress and prolong the system's operational life.
+\subsection{Overall Dimensions}
+
+\subsubsection{Problem Scale}
+The scale of the problem will be defined in this section. Since the original intention for this project was to be used at a power plant, it makes little sense to keep the same scale that was used in MSE2202B. Instead, we are assuming that the real implementation of this system requires large-scale vehicles that would be used at a real power plant. 
+
+\paragraph{Cube} The cube will use the footprint of industry-standard pallets with dimensions $48 \: in$ x $40 \: in$ x $36 \: in$ (Length x Width x Height). The mass of the cube will be $2000 \pm 100 \; kg$. The cube will emit a magnetic field of strength $800 \: mT$ in a random direction.
+
+\paragraph{Pyramid} The pyramid will have a footprint of $90 \: in$ x $90 \: in$ and a height of $72 \: in$. The mass of the pyramid will be $5000 \pm 250 \: kg$ respectively. The height of the perimeter wall will be $36 \: in$ and will be sufficiently strong and wide to support the cube. The cube will feature 360-degree Infrared-Blaster which will emit a signal according to the Pyramid's status.
+
+\paragraph{Surroundings} The surroundings will include a perimeter wall which is $24 \: in$ tall that is sufficient to support the cube. Immobile conduits will be scattered though out the area what are $3 \: in$ tall. 
+
+\subsubsection{System Scale} 
+The system must be agile enough to navigate the course and sweep the entire area. This suggests a small circular or square chassis which will allow the system to sweep the corners of the map. As the system will be required to lift more than $5000 \: kg$, the system will need to be very substantial and will likely resemble advanced heavy construction equipment. Exact dimensions and configurations of the system will be defined later in this project.
+
+\subsection{Operating Forces and Torques}
 Operating Forces and Torques must not exceed the specified maximums of the materials used. The motors in the wheels must provide enough torque to be able to climb over the obstacles.
-\subsubsection{Mass and Inertia of Components in Motion}
+\subsection{Mass and Inertia of Components in Motion}
 The weight of sensors and actuators will add to the weight of the entire robot, and must be accounted for in calculations. They will also add additional inertia, possibly reducing the accuracy of stopping and starting at set distances.
-\subsubsection{Structural Frame Rigidity}
+\subsection{Structural Frame Rigidity}
 Frame must support all components used in the system. The frame must be sufficiently rigid to not deform under the weight of the sensors; actuators; controllers; power supplies; and cargo, such that it continues to operate as desired.
-\subsubsection{Expected Temperature Range}
+\subsection{Expected Temperature Range}
 The system must comply with the Industrial Temperature standard of $-40$ to $85$ degrees Celsius. This will ensure that all components used in the system will work in a large range of environments. \\
 
 Any heat generated by the system must be negligible from an environmental perspective, for example, the system will not emit excessive amounts of heat which can negatively affect the environment. 
-\subsubsection{Expected Cleanliness}
+\subsection{Expected Cleanliness}
 The system must not contaminate the environment. Possible Contaminants include Oil; Grease; and Battery Acid. To comply with this regulation, sealed bearings and transmissions will be used in the drive train subsystem and dry-cell batteries will be used for power storage, both of these measures will lower the probability of environmental contamination
-\subsubsection{Safety Features}
+\subsection{Safety Features}
 Industrial Safety standards surrounding heavy equipment must be complied with to ensure human health and safety. The system will employ measures to protect human health sand safety such a restraints and guards around moving parts; adequate shielding around components which emit large amounts of electromagnetic interference; and substantial insulation around wiring. \\
 
 Ethics must be followed with regards to autonomous decision making. 
 
 \clearpage
-\section{Milestones and Timeline}
-\subsection{Project Timeline}
+\section{Project Timeline}
 
 
 \textit{Week of:}
@@ -105,31 +116,24 @@ Ethics must be followed with regards to autonomous decision making.
 \textbf{Feb. 18} &\textbf{\textit{Research Applicable Actuators?}}\\
  & $\bullet$ point 1\\
   & $\bullet$ point 1\\
-   & $\bullet$ point 1\\
 \textbf{Feb. 25} & \textbf{\textit{Do Design?}}\\
  & $\bullet$ point 1\\
   & $\bullet$ point 1\\
-   & $\bullet$ point 1\\
 \textbf{Mar. 04} & \textbf{\textit{Finalize Actuator Simulations?}}\\
  & $\bullet$ point 1\\
   & $\bullet$ point 1\\
-   & $\bullet$ point 1\\
 \textbf{Mar. 11} &\textbf{Preliminary Actuator Selection Deliverable}\\
  & $\bullet$ point 1\\
   & $\bullet$ point 1\\
-   & $\bullet$ point 1\\
 \textbf{Mar. 18} & \textbf{\textit{Evaluate Preliminary Sensor and Actuators?}}\\
  & $\bullet$ point 1\\
   & $\bullet$ point 1\\
-   & $\bullet$ point 1\\
 \textbf{Mar. 25} & \textbf{\textit{Obtain feedback and iterate?}}\\
  & $\bullet$ point 1\\
   & $\bullet$ point 1\\
-   & $\bullet$ point 1\\
 \textbf{Apr. 01} & \textbf{Finalize Final Simulations and Report}\\
  & $\bullet$ point 1\\
   & $\bullet$ point 1\\
-   & $\bullet$ point 1\\
 
 
 \end{tabular}

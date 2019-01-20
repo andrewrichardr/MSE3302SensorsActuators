@@ -17,7 +17,7 @@
 \newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
 
 \begin{document}
-\title{\textbf{Tesseract Project Revisit:\\Specification and Requirements\\ MSE 3302 B}}
+\title{\textbf{Tesseract Project Revisit\\Specification and Requirements\\ MSE 3302 B}}
 \author{
   Alan Harris\\
   250901911
@@ -69,7 +69,10 @@ The scale of the problem will be defined in this section. Since the original int
 The system must be agile enough to navigate the course and sweep the entire area. This suggests a small circular or square chassis which will allow the system to sweep the corners of the map. As the system will be required to lift more than $5000 \: kg$, the system will need to be very substantial and will likely resemble advanced heavy construction equipment. Exact dimensions and configurations of the system will be defined later in this project.
 
 \subsection{Operating Forces and Torques}
-Operating Forces and Torques must not exceed the specified maximums of the materials used. The motors in the wheels must provide enough torque to be able to climb over the obstacles.
+Operating Forces and Torques must not exceed the specified maximums of the materials used. All materials loaded in tension must have an ultimate tensile strength greater than the applied load including a factor of safety. All materials loaded with torques must have sufficient shear strength for the load including a factor of safety. All material loaded in bending must have sufficient flexural strength for the load including a factor of safety.\\
+
+As the masses of the Cube and the Pyramid are very substantial, the forces and torques developed in the structural components of the system will be high. The actuators used to drive the mechanisms which lift the cube and pyramid will be required to develop sufficient forces or torques with a factor of safety. The motors in the wheels must provide enough torque to be able to climb over the obstacles. 
+
 \subsection{Mass and Inertia of Components in Motion}
 The weight of sensors and actuators will add to the weight of the entire robot, and must be accounted for in calculations. They will also add additional inertia, possibly reducing the accuracy of stopping and starting at set distances.
 \subsection{Structural Frame Rigidity}

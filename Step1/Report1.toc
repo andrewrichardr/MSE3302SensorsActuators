@@ -6,13 +6,13 @@
 \contentsline {subsection}{\numberline {1.5}Power Rating and Voltage Rating for Power Supply}{1}
 \contentsline {subsection}{\numberline {1.6}Overall Dimensions}{1}
 \contentsline {subsubsection}{\numberline {1.6.1}Problem Scale}{1}
-\contentsline {paragraph}{Cube}{2}
+\contentsline {paragraph}{Tesseract}{2}
 \contentsline {paragraph}{Pyramid}{2}
 \contentsline {paragraph}{Surroundings}{2}
 \contentsline {subsubsection}{\numberline {1.6.2}System Scale}{2}
 \contentsline {subsection}{\numberline {1.7}Operating Forces and Torques}{2}
 \contentsline {subsection}{\numberline {1.8}Mass and Inertia of Components in Motion}{2}
-\contentsline {subsection}{\numberline {1.9}Structural Frame Rigidity}{2}
+\contentsline {subsection}{\numberline {1.9}Structural Frame Rigidity}{3}
 \contentsline {subsection}{\numberline {1.10}Expected Temperature Range}{3}
 \contentsline {subsection}{\numberline {1.11}Expected Cleanliness}{3}
 \contentsline {subsection}{\numberline {1.12}Safety Features}{3}

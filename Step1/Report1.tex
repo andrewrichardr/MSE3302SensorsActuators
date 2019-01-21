@@ -43,36 +43,36 @@
  
 \section{Design Specifications and Requirements}
 \subsection{Required Speed}
-The speed at which the system operates at must be maximized in order to reduce completion time while remaining stable with minimal overshoot and high accuracy. This speed must not exceed any limits imposed by the magnetic sensor, chassis, drive train, cube transportation system or any other subsystems.  \\
+The speed at which the system operates at must be maximized in order to reduce completion time while remaining stable with minimal overshoot and high accuracy. This speed must not exceed any limits imposed by the magnetic sensor, chassis, drive train, Tesseract transportation system or any other subsystems.  \\
 
 The selected sensors and actuators will impose quantitative restraints on the optimal operating speed. Simulink Simulations will be conducted to determine the optimal operating speed for each sensor. The Simulation results will be compiled together and analyzed to determine the optimal operating speed.
 
 \subsection{Required Acceleration}
-To provide smooth operation, acceleration of the system will be kept to a minimum to reduce undesirable transient effects. This will ensure minimal wear on the drive train components and will reduce the probability of dropping the cube. 
+To provide smooth operation, acceleration of the system will be kept to a minimum to reduce undesirable transient effects. This will ensure minimal wear on the drive train components and will reduce the probability of dropping the Tesseract. 
 \subsection{Required Accuracy and Resolution}
-The sensors which track the wall must have sufficient accuracy to maintain a constant distance. The magnetic cube sensor must have sufficient accuracy and range to detect when the cube is within grabbing range. Resolution of all sensors will need to be sufficiently high to ensure that false-positives are avoided when locating the cube and pyramid, as well as tracking the wall with minimal steady-state error.  
+The sensors which track the wall must have sufficient accuracy to maintain a constant distance. The magnetic Tesseract sensor must have sufficient accuracy and range to detect when the Tesseract is within grabbing range. Resolution of all sensors will need to be sufficiently high to ensure that false-positives are avoided when locating the cube and pyramid, as well as tracking the wall with minimal steady-state error.  
 \subsection{Allowable Overshoot}
-The ideal response of the system is critically-damped to yield the fastest response with zero overshoot. However, if overshoot becomes a necessity, it must be kept to a minimum to preserve system stability. A PID controller will be investigated to help minimize the system's overshoot.
+The ideal response of the system is critically-damped as this yields the fastest response with zero overshoot. However, if overshoot becomes a necessity, it must be kept to a minimum to preserve system stability. A PID controller will be investigated to help minimize the system's overshoot.
 \subsection{Power Rating and Voltage Rating for Power Supply}
-The power supply must provide sufficient power to drive the motors at the required constant speed. The voltage must not dip or rise outside of a specified range during operation to reduce negative disturbances on the sensors and control system. A large factor of safety will be included with the power supply to reduce stress and prolong the system's operational life.
+The power supply must provide sufficient power to drive the motors at the required constant speed. The voltage must not dip or rise outside of a specified range during operation to reduce negative disturbances on the sensors and control system. A large factor of safety will be included with the power supply to reduce stress and prolong the system's operational life. The power supply must be able to continuously provide a clean source of power for the required duration including a factor of safety.
 \subsection{Overall Dimensions}
 
 \subsubsection{Problem Scale}
 The scale of the problem is defined in this section. Since the original intention for this project was to be used at a power plant, it makes little sense to keep the same small scale that was used in MSE2202B. Instead, it is being assumed that the real implementation of this system requires large-scale vehicles that would be used at a real power plant. 
 
-\paragraph{Cube} The cube will use the footprint of industry-standard pallets with dimensions $48 \: in$ x $40 \: in$ x $36 \: in$ (Length x Width x Height). The mass of the cube will be $2000 \pm 100 \; kg$. The cube will emit a magnetic field of strength $800 \: mT$ in a random direction.
+\paragraph{Tesseract} The Tesseract will use the footprint of industry-standard pallets with dimensions $48 \: in$ x $40 \: in$ x $36 \: in$ (Length x Width x Height). The mass of the cube will be $1000 \pm 100 \; kg$. The cube will emit a magnetic field of strength $800 \: mT$ in a random direction.
 
-\paragraph{Pyramid} The pyramid will have a footprint of $90 \: in$ x $90 \: in$ and a height of $72 \: in$. The mass of the pyramid will be $5000 \pm 250 \: kg$ respectively. The height of the perimeter wall will be $36 \: in$ and will be sufficiently strong and wide to support the cube. The cube will feature 360-degree Infrared-Blaster which will emit a signal according to the Pyramid's status.
+\paragraph{Pyramid} The pyramid will have a footprint of $90 \: in$ x $90 \: in$ and a height of $72 \: in$. The mass of the pyramid will be $2500 \pm 250 \: kg$. The pyramid will feature 360-degree Infrared-Blaster which will emit a signal according to the Pyramid's status.
 
-\paragraph{Surroundings} The surroundings will include a perimeter wall which is $24 \: in$ tall that is sufficient to support the cube. The perimeter wall surrounds a square area with side lengths of $50 \: ft$ by $50 \: ft$ and immobile conduits will be scattered though out the area what are $3 \: in$ tall and $3 \: in$ wide. 
+\paragraph{Surroundings} The surroundings will include a perimeter wall which is $36 \: in$ tall that is sufficient to support the cube. Immobile conduits will be scattered though out the area what are $3 \: in$ tall. The system must be able to autonomously navigate the surroundings with no human intervention.
 
 \subsubsection{System Scale} 
-The system must be agile enough to navigate the course and sweep the entire area. This suggests a small circular or square chassis which will allow the system to sweep the corners of the map. As the system will be required to lift more than $5000 \: kg$, the system will need to be very substantial and will likely resemble advanced heavy construction equipment. Exact dimensions and configurations of the system will be defined later in this project.
+The system must be agile enough to navigate the course and sweep the entire area. This suggests a small circular or square chassis which will allow the system to sweep the corners of the course. As the system will be required to lift more than $2500 \: kg$, the system will need to be very substantial and will likely resemble advanced construction equipment. Exact dimensions and configurations of the system will be defined later in this project. At this time, there are no restrictions on the system size, however, the system will be realistic.
 
 \subsection{Operating Forces and Torques}
 Operating Forces and Torques must not exceed the specified maximums of the materials used. All materials loaded in tension must have an ultimate tensile strength greater than the applied load including a factor of safety. All materials loaded with torques must have sufficient shear strength for the load including a factor of safety. All material loaded in bending must have sufficient flexural strength for the load including a factor of safety.\\
 
-As the masses of the Cube and the Pyramid are very substantial, the forces and torques developed in the structural components of the system will be high. The actuators used to drive the mechanisms which lift the cube and pyramid will be required to develop sufficient forces or torques with a factor of safety. The motors in the wheels must provide enough torque to be able to climb over the obstacles. 
+As the masses of the Tesseract and the Pyramid are very substantial, the forces and torques developed in the structural components of the system will be high. The actuators used to drive the mechanisms which lift the cube and pyramid will be required to develop sufficient forces or torques with a factor of safety. The motors in the wheels must provide enough torque to be able to climb over the obstacles. 
 
 \subsection{Mass and Inertia of Components in Motion}
 The weight of sensors and actuators will add to the weight of the entire robot, and must be accounted for in calculations. They will also add additional inertia, possibly reducing the accuracy of stopping and starting at set distances.
@@ -83,7 +83,7 @@ The system must comply with the Industrial Temperature standard of $-40$ to $85$
 
 Any heat generated by the system must be negligible from an environmental perspective, for example, the system will not emit excessive amounts of heat which can negatively affect the environment. 
 \subsection{Expected Cleanliness}
-The system must not contaminate the environment. Possible contaminants include oil; grease; and battery acid. To comply with this regulation, sealed bearings and transmissions will be used in the drive train subsystem and dry-cell batteries will be used for power storage, both of these measures will lower the probability of environmental contamination
+The system must not contaminate the environment. Possible contaminants include oil; grease; and battery acid. To comply with this regulation, sealed bearings and transmissions will be used in the drive train subsystem and dry-cell batteries will be used for power storage, both of these measures will lower the probability of environmental contamination.
 \subsection{Safety Features}
 Industrial safety standards surrounding heavy equipment must be complied with to ensure human health and safety. The system will employ measures to protect human health sand safety such as restraints and guards around moving parts; adequate shielding around components which emit large amounts of electromagnetic interference; and substantial insulation around wiring. \\
 

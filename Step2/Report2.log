@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.9.30)  21 JAN 2019 20:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.9.30)  13 FEB 2019 10:12
 entering extended mode
-**./Report1.tex
-(Report1.tex
+**./Report2.tex
+(Report2.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -689,8 +689,8 @@ Package: placeins 2005/04/18  v 2.2
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (Report1.aux)
-\openout1 = `Report1.aux'.
+) (Report2.aux)
+\openout1 = `Report2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -819,69 +819,35 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 36.
-(Report1.toc
+(Report2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
+(Font)              <6> on input line 2.
 )
 \tf@toc=\write5
-\openout5 = `Report1.toc'.
+\openout5 = `Report2.toc'.
 
  [1
 
-{C:/Users/Andrew/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 45--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-
- []
-
-[3]
-Overfull \hbox (8.65pt too wide) in paragraph at lines 105--153
-[][]  
- []
-
-[4
-
-] (Report1.aux) ) 
+{C:/Users/Andrew/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1] (Repor
+t2.aux) ) 
 Here is how much of TeX's memory you used:
- 23022 strings out of 492970
- 455177 string characters out of 3135852
- 487395 words of memory out of 3000000
- 26601 multiletter control sequences out of 15000+200000
- 538469 words of font info for 44 fonts, out of 3000000 for 9000
+ 23026 strings out of 492970
+ 455241 string characters out of 3135852
+ 487403 words of memory out of 3000000
+ 26606 multiletter control sequences out of 15000+200000
+ 538160 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,10n,65p,673b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Report1.pdf (5 pages, 86156 bytes).
+ 62i,8n,65p,673b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Report2.pdf (2 pages, 50663 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 24 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

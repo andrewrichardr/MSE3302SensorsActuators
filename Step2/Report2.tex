@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} 
+\graphicspath{ {./} }
+\usepackage{float} 
+\usepackage{karnaugh-map}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{gensymb}
+
+\newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
+\newcommand{\ts}{\textsuperscript}
+
+\begin{document}
+\title{\textbf{Tesseract Project Revisit\\Preliminary Sensor Selection\\ MSE 3302 B}}
+\author{
+  Alan Harris\\
+  250901911
+  \and
+  Robert Potra\\
+  250914807
+  \and
+  Andrew Randell\\
+  250911270
+  \and
+  Kevin Wang\\
+  250908180
+}
+\date{\today}
+\maketitle
+
+\tableofcontents
+\thispagestyle{empty}
+
+\pagebreak
+\setcounter{page}{1}
+
+\section{Sensor Specifications}
+\subsection{Autonomous System (Vehicle)}
+\subsubsection{Local Position relative to Perimeter}
+From a micro perspective, the vehicle will need to know the distances it is from the perimeter wall on atleast one side of the vehicle and the front of the vehicle.
+
+\subsubsection{Local Position relative to Tesseract}
+
+
+\subsubsection{Local Position relative to Pyramid(s)}
+\subsubsection{Global Position}
+From a macro perspective, the vehicle will need to know an approximate location of where it is on a map, as well as the approximate locations of pyramid(s) and tesseracts. 
+
+\paragraph{GNSS} (Global Navigation Satellite System) is the global positioning technology that is applicable. GNSS is a generic world-wide term used to describe satellite navigation systems. The specific technology used is dependant on the region where it is being used. Regional tecnologies include GPS, GLONASS, Beidou, and Galileo.  This technology provides \textit{approximate} latitude, longitude, and altitude metrics to their host device. 
+
+\paragraph{Hardware Implementation} of GNSS on devices is very straight forward with GNSS Modules. These modules are integrated GNSS receivers which can easily be implemented onto devices. They generally require a power input and provide NMEA 0183 GNSS coordinates over a UART connection. A table below has been compiled of high ranking GNSS modules. The controller must support UART communication for compatibility with most GNSS modules.
+
+\begin{table}[htbp]
+  \centering
+  \caption{GNSS Modules}
+    \begin{tabular}{c|c|c|c|c|c|c}
+    MPN   & Manufacturer & Sample Rate & Interface & Baud Rate & Type& Supply Voltage \\
+    \midrule
+    GPS-L10 & MoTeC & 10 Hz & RS232 & 38400 &     PnP  & 5V \\
+    NEO-M8L & uBlox & 30 Hz & UART  & config. &    PCB   & 3.3 V \\
+    CAM-M8Q & uBlox & 10 Hz & UART  & config. & PCB & 3.3 V \\
+    EM-506 & GlobalSat & 5 Hz & UART  & config. & PCB & 5V \\
+    Venus638FLPx & SkyTraq & 20 Hz & UART  & config. & PCB & 3.3V \\
+    LS20031 & Locosys & 5 Hz  & UART  & config. & PnP & 3.3V \\
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+\paragraph{Software Implementation} will require prior mapping of the power plant. The GNSS will provide approximate coordinates on this software map. This will be used in conjunction with local sensing techniques to make informed decisions about the locations of the autonomous system relative to the tesseract and pyramid(s).
+
+
+\subsection{Tesseract}
+
+\subsection{Pyramid}
+
+
+
+\end{document}

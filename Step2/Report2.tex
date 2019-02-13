@@ -44,7 +44,16 @@
 \section{Sensor Specifications}
 \subsection{Autonomous System (Vehicle)}
 \subsubsection{Local Position relative to Perimeter}
-From a micro perspective, the vehicle will need to know the distances it is from the perimeter wall on atleast one side of the vehicle and the front of the vehicle.
+\paragraph{Concept Generation}
+
+\begin{enumerate}
+\item \textbf{LIDAR} - This method involves using pulsing lasers to scan the perimeter, and using response times to map out the surrounding area.
+
+\item \textbf{Ultrasonic} - This sensor placed on the outside of the vehicle uses sound to detect nearby objects, and avoid obstacle collisions.
+
+\item \textbf{Sonar/Radar} - This method is similar to ultrasonic, but on a much larger scale. It uses the same principles, but will allow the robot to gather a larger image of the perimeter.
+\end{enumerate}
+
 
 \subsubsection{Local Position relative to Tesseract}
 
@@ -76,10 +85,54 @@ From a macro perspective, the vehicle will need to know an approximate location 
 \paragraph{Software Implementation} will require prior mapping of the power plant. The GNSS will provide approximate coordinates on this software map. This will be used in conjunction with local sensing techniques to make informed decisions about the locations of the autonomous system relative to the tesseract and pyramid(s).
 
 
-\subsection{Tesseract}
+\subsection{Controller}
 
-\subsection{Pyramid}
+\textbf{Navigational Map, Machine Learning} - In this method, the robot is manually controlled and does a complete survey of the perimeter. After sweeping the entire location, it can then create a navigational map based on the distance it traveled. It then uses this map to navigate autonomously.
 
+\subsection{Modeling}
+
+\clearpage
+\section{Project Timeline}
+
+\begin{flushleft}
+\textit{Week of:}
+
+\begin{tabular}{l | l}
+
+
+ 
+\textbf{Feb. 11} &\textbf{Preliminary Sensor Selection Deliverable: Step 2 Due Feb. 15\ts{th}}\\
+ & $\bullet$ Prepare and finalize report for step 2 deliverable\\\\
+ 
+\textbf{Feb. 18} &\textbf{Research Applicable Actuators}\\
+ & $\bullet$ Restate and redefine actuator specifications\\
+  & $\bullet$ Identify possible actuator options based on previous concepts\\\\
+  
+\textbf{Feb. 25} & \textbf{Continue Actuator Design}\\
+ & $\bullet$ Concept generation using possible actuator options\\
+  & $\bullet$ Refine logic connecting the sensor data to actuator actions\\\\
+  
+\textbf{Mar. 04} & \textbf{Finalize Actuator Simulations}\\
+ & $\bullet$ Perform actuator simulations using Simulink\\
+ & $\bullet$ Begin preparing report for step 3 deliverable\\
+ & $\bullet$ Perform concept selection using actuator simulation results and analysis\\\\
+ 
+\textbf{Mar. 11} &\textbf{Preliminary Actuator Selection Deliverable: Step 3 Due Mar. 15\ts{th}}\\
+ & $\bullet$ Continue preparing and finalize report step 3 deliverable\\\\
+ 
+\textbf{Mar. 18} & \textbf{Evaluate Sensor and Actuators}\\
+ & $\bullet$ Evaluate the proposed system of sensors and actuators\\
+  & $\bullet$ Create a kinematic system model and perform analysis using Solidworks\\\\
+  
+\textbf{Mar. 25} & \textbf{Obtain Feedback and Iterate}\\
+  & $\bullet$ Identify possible problems with the proposed system of sensors and actuators\\
+  & $\bullet$ Refine analysis for the transducers, control device, kinematics, and power supply\\\\
+  
+\textbf{Apr. 01} & \textbf{Finalize Final Simulations and Report: Step 4 Due Apr. 5\ts{th}}\\
+ & $\bullet$ Continue preparing final report for step 4 deliverable\\
+
+\end{tabular}
+\end{flushleft}
 
 
 \end{document}

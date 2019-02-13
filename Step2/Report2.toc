@@ -1,11 +1,13 @@
 \contentsline {section}{\numberline {1}Sensor Specifications}{1}
 \contentsline {subsection}{\numberline {1.1}Autonomous System (Vehicle)}{1}
 \contentsline {subsubsection}{\numberline {1.1.1}Local Position relative to Perimeter}{1}
+\contentsline {paragraph}{Concept Generation}{1}
 \contentsline {subsubsection}{\numberline {1.1.2}Local Position relative to Tesseract}{1}
 \contentsline {subsubsection}{\numberline {1.1.3}Local Position relative to Pyramid(s)}{1}
 \contentsline {subsubsection}{\numberline {1.1.4}Global Position}{1}
 \contentsline {paragraph}{GNSS}{1}
 \contentsline {paragraph}{Hardware Implementation}{1}
-\contentsline {paragraph}{Software Implementation}{1}
-\contentsline {subsection}{\numberline {1.2}Tesseract}{1}
-\contentsline {subsection}{\numberline {1.3}Pyramid}{1}
+\contentsline {paragraph}{Software Implementation}{2}
+\contentsline {subsection}{\numberline {1.2}Controller}{2}
+\contentsline {subsection}{\numberline {1.3}Modeling}{2}
+\contentsline {section}{\numberline {2}Project Timeline}{3}

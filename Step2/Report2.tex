@@ -93,9 +93,14 @@ The chosen sensors are ultrasonic, as well as LIDAR.
 
 
 \subsection{Tesseract Detection}
-
+Tesseract detection is an important function which the robot must perform. There are four main sensors which will be considered for the tesseract detection function—Hall Effect, magnetometer, reed switch and computer vision. 
+The Hall Effect sensor is a standard sensor which excels in proximity sensing, position, speed detection and current sensing applications. However, hall effect sensor has a lower measuring accuracy and sensitivity—which is an important factor for improving the robot’s functionality—and the output signal tends to drift. 
+The magnetometer is a magnetic sensor which is an instrument that measure magnetism. For the tesseract detection application, a vector-based magnetometer will be used apart from a scalar. A specific vector magnetometer is the fluxgate magnetometer. This sensor delivers the second highest level of sensitivity and dynamic range, while keeping noises and temperature drift low. Having a magnetic core and compensation coil, this sensor delivers high accuracy and low leakage.  
+The reed switch is an electrical switch which is operated by a magnetic field. The switch is actuated when a magnet is brought near the switch. The reed switch operates with a parallel magnetic field, unlike hall effect which operates on a perpendicular magnetic field. Due to the mechanical parts of the reed switch the life expectancy is lower. The range and sensitivity also lower compared to the other sensors due to its parallel sensing orientation. 
 
 \subsection{Pyramid Detection}
+In order to decode the infrared (IR) signal sent by the pyramid, an IR sensor will be used.  IR sensors excels in this application because of its ability to be applied to a large area. This is a useful quality as it makes pyramid detection easier, especially with conjunction of global positioning. IR sensors also have high repeatability and provide good stability over time these are all important qualifications for “large…”. An important note for this sensor is that the transmitter and receiver must be in line of sight (LOS). For the final design, final design of the robot must ensure that the IR sensor is in LOS with the transmitter and there are not obstructions in the LOS. 
+
 \subsection{Global Position}
 From a macro perspective, the vehicle will need to know an approximate location of where it is on a map, as well as the approximate locations of pyramid(s) and tesseracts. 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.9.30)  14 FEB 2019 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.9.30)  14 FEB 2019 19:43
 entering extended mode
 **./Report2.tex
 (Report2.tex
@@ -833,22 +833,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/Andrew/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-! Undefined control sequence.
-l.48 \scale
-           {0.6}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 88--93
 
-[1] [2] [3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--93
+
+ []
+
+[1] [2] [3] [4
 
 ] (Report2.aux) ) 
 Here is how much of TeX's memory you used:
  23029 strings out of 492970
  455269 string characters out of 3135852
- 500403 words of memory out of 3000000
+ 502403 words of memory out of 3000000
  26608 multiletter control sequences out of 15000+200000
  538469 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -858,9 +868,9 @@ bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Report2.pdf (4 pages, 75439 bytes).
+Output written on Report2.pdf (5 pages, 75861 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,11 +4,11 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Concept Selection}{2}
 \contentsline {subsection}{\numberline {2.2}Tesseract Detection}{3}
 \contentsline {subsection}{\numberline {2.3}Pyramid Detection}{3}
-\contentsline {subsection}{\numberline {2.4}Global Position}{3}
-\contentsline {paragraph}{GNSS}{3}
-\contentsline {paragraph}{Hardware Implementation}{3}
-\contentsline {paragraph}{Software Implementation}{3}
-\contentsline {section}{\numberline {3}Controller}{3}
-\contentsline {subsection}{\numberline {3.1}Navigational Map}{3}
+\contentsline {subsection}{\numberline {2.4}Global Position}{4}
+\contentsline {paragraph}{GNSS}{4}
+\contentsline {paragraph}{Hardware Implementation}{4}
+\contentsline {section}{\numberline {3}Controller}{4}
+\contentsline {subsection}{\numberline {3.1}High-Level Logic}{4}
+\contentsline {subsection}{\numberline {3.2}Navigational Map}{4}
 \contentsline {section}{\numberline {4}Modeling}{4}
 \contentsline {section}{\numberline {5}Project Timeline}{5}

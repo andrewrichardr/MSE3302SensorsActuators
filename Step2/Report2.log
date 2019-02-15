@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.9.30)  14 FEB 2019 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.9.30)  14 FEB 2019 22:59
 entering extended mode
 **./Report2.tex
 (Report2.tex
@@ -868,23 +868,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--98
 
  []
 
-[2] [3] [4] [5
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+[3] [4] [5
 
 ] (Report2.aux) ) 
 Here is how much of TeX's memory you used:
- 23126 strings out of 492970
- 456493 string characters out of 3135852
+ 23127 strings out of 492970
+ 456509 string characters out of 3135852
  506595 words of memory out of 3000000
- 26699 multiletter control sequences out of 15000+200000
+ 26700 multiletter control sequences out of 15000+200000
  538469 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,65p,834b,277s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,65p,834b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Report2.pdf (6 pages, 75283 bytes).
+Output written on Report2.pdf (6 pages, 79443 bytes).
 PDF statistics:
  44 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

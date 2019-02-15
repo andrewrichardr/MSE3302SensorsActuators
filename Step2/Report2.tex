@@ -108,16 +108,18 @@ The reed switch is an electrical switch which is operated by a magnetic field. T
 In order to decode the infrared (IR) signal sent by the pyramid, an IR sensor will be used.  IR sensors excels in this application because of its ability to be applied to a large area. This is a useful quality as it makes pyramid detection easier, especially with conjunction of global positioning. IR sensors also have high repeatability and provide good stability over time these are all important qualifications for “large…”. An important note for this sensor is that the transmitter and receiver must be in line of sight (LOS). For the final design, final design of the robot must ensure that the IR sensor is in LOS with the transmitter and there are not obstructions in the LOS. 
 
 \subsection{Global Position}
-From a macro perspective, the vehicle will need to know an approximate location of where it is on a map, as well as the approximate locations of pyramid(s) and tesseracts. 
+From a macro perspective, the vehicle will need to know an approximate location of where it is on a map, as well as the approximate locations of pyramid(s) and tesseracts. \\
 
 \paragraph{GNSS} (Global Navigation Satellite System) is the global positioning technology that is applicable. GNSS is a generic world-wide term used to describe satellite navigation systems. The specific technology used is dependant on the region where it is being used. Regional tecnologies include GPS, GLONASS, Beidou, and Galileo.  This technology provides \textit{approximate} latitude, longitude, and altitude metrics to their host device. 
 
 \paragraph{Hardware Implementation} of GNSS on devices is very straight forward with GNSS Modules. These modules are integrated GNSS receivers which can easily be implemented onto devices. They generally require a power input and provide NMEA 0183 GNSS coordinates over a UART connection. A table below has been compiled of high ranking GNSS modules. The controller must support UART communication for compatibility with most GNSS modules.
 
-\paragraph{Software Implementation} will require prior mapping of the power plant. The GNSS will provide approximate coordinates on this software map. This will be used in conjunction with local sensing techniques to make informed decisions about the locations of the autonomous system relative to the tesseract and pyramid(s).
-
-
 \section{Controller}
+
+\subsection{High-Level Logic}
+Each time the system begins a cycle, the robot will search for a central home location. The robot will rely on Global Position sensors to find its home location. Once the home location is reached, the robot will rely on local sensors to navigate around the perimeter and locate the Tesseract. After the Tesseract has been retrieved, the robot will rely on a combination of global position sensors and IR sensors to determine the location of the pyramid. When the Tesseract is inserted into the Pyramid, the robot will go into a standby mode finishing the cycle. 
+
+
 
 \subsection{Navigational Map} The robot completes a survey of the area creating a software map in memory. All sensor readings are included in this survey. After the survey has been completed, the system will have a map of the area in which it operates. This map will continuously be updated as the system operates. The map can by used for autonomous navigation.
 

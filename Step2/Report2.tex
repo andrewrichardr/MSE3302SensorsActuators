@@ -87,19 +87,12 @@ GNSS systems can be implemented to give the system latitude, longitude, and alti
 
 \subsection{Concept Selection}
 
-\begin{itemize}
-\setlength\itemsep{-0.5em}
-\item See Table 4 for a Go/No-Go chart that evaluates possible sensor options.
-\item The LVDT, Potentiometer, and Limit Switch were eliminated first because they rely on physical contact with the surroundings. These are not feasible as contacting the wall will quickly wear the sensors. In addition, the range is far too small, and should not be limited to a simple binary contact.
-
-\item Encoders on the wheels were ruled out as there is a strong dependence on full traction of the wheels. The slightest loss of grip will throw off the sensors entirely, and will give inaccurate readings.
-
-\item Capacitive Sensors were eliminated because the scale of the measurements is far too small for the size of the robot. Considering that the wall area is quite large, a capacitive sensor will not be able to provide the range necessary to accurately detect local position.
-
-\item Ultrasonic sensors provide a contactless solution that provides decent accuracy and repeatability. When the robot is close to a perimeter wall, they will be sufficient for navigation.
-
-\item GNSS struggles to provide coordinates that have greater accuracy than +- 5 meters. Due to this, GNSS is acceptable for approximate positioning, such as locating a constant home location or for locating known coordinates of areas of rough terrain. 
-\end{itemize}
+See Table 4 for a Go/No-Go chart that evaluates possible sensor options.\\
+The LVDT, Potentiometer, and Limit Switch were eliminated first because they rely on physical contact with the surroundings. These are not feasible as contacting the wall will quickly wear the sensors. In addition, the range is far too small, and should not be limited to a simple binary contact.
+Encoders on the wheels were ruled out as there is a strong dependence on full traction of the wheels. The slightest loss of grip will throw off the sensors entirely, and will give inaccurate readings.
+Capacitive Sensors were eliminated because the scale of the measurements is far too small for the size of the robot. Considering that the wall area is quite large, a capacitive sensor will not be able to provide the range necessary to accurately detect local position.
+Ultrasonic sensors provide a contactless solution that provides decent accuracy and repeatability. When the robot is close to a perimeter wall, they will be sufficient for navigation.
+GNSS struggles to provide coordinates that have greater accuracy than +- 5 meters. Due to this, GNSS is acceptable for approximate positioning, such as locating a constant home location or for locating known coordinates of areas of rough terrain. \\
 
 Selected sensors: Audiowell UM0090-000 Ultrasonic Sensor, U-blox NEO-M8N GNSS Module
 

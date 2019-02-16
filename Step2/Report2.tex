@@ -101,6 +101,8 @@ GNSS systems can be implemented to give the system latitude, longitude, and alti
 \item GNSS struggles to provide coordinates that have greater accuracy than +- 5 meters. Due to this, GNSS is acceptable for approximate positioning, such as locating a constant home location or for locating known coordinates of areas of rough terrain. 
 \end{itemize}
 
+Selected sensor: Audiowell UM0090-000 Ultrasonic Sensor
+
 \subsection{Concept Choice}
 For local positioning, six pairs ultrasonic sensors will be used on the robot: two pairs of sensors will be on the left and right sides, and a single pair of sensors will be on the front and back. Alignment and distance from the perimeter wall will be determined from this sensor setup. This setup also provides redundancy if some of the sensors fail. The applicable pairs of sensors will have plausibility checks to determine if the system is functioning properly. If the system fails plausibility checks, the robot will shut down and require human intervention.
 
@@ -146,7 +148,8 @@ For global positioning, a GNSS module will be used to provide latitude and longi
 See Table 4 for a Go/No-Go chart that evaluates sensor options.\\ 
 The Hall Effect sensor is a standard sensor which excels in proximity sensing, position, speed detection and current sensing applications. However, hall effect sensors have lower measuring accuracy and sensitivity—which is an important factor for improving the robot’s functionality—and the output signal tends to drift. For these reasons, it is unacceptable as a sensor to find the tesseract.
 The reed switch was also an unideal option, as it relies on physical contact. This means that the range and sensitivity are extremely low, as well as only returning a binary value. Additionally, the life expectancy is lower due to the mechanical nature of the sensor.
-A vector-based magnetometer is the best sensor for finding the tesseract. This sensor delivers a high level of sensitivity and dynamic range. Additionally, noise and temperature drift are kept low. 
+A vector-based magnetometer is the best sensor for finding the tesseract. This sensor delivers a high level of sensitivity and dynamic range. Additionally, noise and temperature drift are kept low. \\
+Selected sensor: Honeywell HMC2003 Magnetic Sensor
 
 \subsection{Concept Choice}
 A contactless method of detecting the tesseract cube is prefered as this reduces wear and tear on the system and can increase the operating speed. Since the magnetic field of the Tesseract is approximately 800 mT, which is comparable to an MRI machine, the magnetometer should not have any difficulty distinguishing between the earth’s magnetic field or other nearby magnetic fields such as motors.
@@ -192,6 +195,7 @@ Using Computer vision to analyze images for item which appear to be pyramids cou
 
 In order to decode the infrared (IR) signal sent by the pyramid, an IR sensor is most suitable.  IR sensors excels in this application because of its ability pick up signals in a large area. This is a useful quality as it makes pyramid detection easier, especially used in conjunction with GNSS. IR sensors have high repeatability and provide good stability over time. An important note for this sensor is that the transmitter and receiver must be in line of sight (LOS). 
 
+Selected sensor: Asahi Kasei UM0090-000 IR Sensor
 
 \subsection{Concept Choice}
 An infrared sensor combined with the GNSS coordinates will be used to determine the location of the pyramid. Because the range of the IR sensors is fairly limited, it cannot solely be relied upon for pyramid positioning. Locating the pyramid will consists of a series of 360-degree IR scans on a grid of points on the map. The map of the power plant will be divided into a grid of squares with dimensions of 5m x 5m. At each point on this grid, the robot will execute a 360-degree scan. If the robot has completed the task before, the robot will have the coordinates of the pyramid location stored in memory from the last cycle. If this is the case, it will rely upon GNSS to determine the rough location of the pyramid. 

@@ -101,7 +101,7 @@ GNSS systems can be implemented to give the system latitude, longitude, and alti
 \item GNSS struggles to provide coordinates that have greater accuracy than +- 5 meters. Due to this, GNSS is acceptable for approximate positioning, such as locating a constant home location or for locating known coordinates of areas of rough terrain. 
 \end{itemize}
 
-Selected sensor: Audiowell UM0090-000 Ultrasonic Sensor
+Selected sensors: Audiowell UM0090-000 Ultrasonic Sensor, U-blox NEO-M8N GNSS Module
 
 \subsection{Concept Choice}
 For local positioning, six pairs ultrasonic sensors will be used on the robot: two pairs of sensors will be on the left and right sides, and a single pair of sensors will be on the front and back. Alignment and distance from the perimeter wall will be determined from this sensor setup. This setup also provides redundancy if some of the sensors fail. The applicable pairs of sensors will have plausibility checks to determine if the system is functioning properly. If the system fails plausibility checks, the robot will shut down and require human intervention.

@@ -3,7 +3,6 @@
 \usepackage{blindtext}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx} 
-\graphicspath{ {./images/} }
 \usepackage{float} 
 \usepackage{karnaugh-map}
 \usepackage{rotating}
@@ -14,6 +13,7 @@
 \usepackage{placeins}
 \usepackage{gensymb}
 \usepackage{color, colortbl}
+\graphicspath{ {./Figures} }
 
 \newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
 \newcommand{\ts}{\textsuperscript}
@@ -57,15 +57,58 @@ GNSS systems can be implemented to give the system latitude, longitude, and alti
 \end{itemize}
 
 \subsection{Concept Selection}
+
+\begin{itemize}
+\item The LVDT, Potentiometer, and Limit Switch were eliminated first because they rely on physical contact with the surroundings. These are not feasible as contacting the wall will quickly wear the sensors. In addition, the range is far too small, and should not be limited to a simple binary contact.
+
+\item Encoders on the wheels were ruled out as there is a strong dependence on full traction of the wheels. The slightest loss of grip will throw off the sensors entirely, and will give inaccurate readings.
+
+\item Capacitive Sensors were eliminated because the scale of the measurements is far too small for the size of the robot. Considering that the wall area is quite large, a capacitive sensor will not be able to provide the range necessary to accurately detect local position.
+
+\item Ultrasonic sensors provide a contactless solution that provides decent accuracy and repeatability. When the robot is close to a perimeter wall, they will be sufficient for navigation.
+
+\item GNSS struggles to provide coordinates that have greater accuracy than +- 5 meters. Due to this, GNSS is acceptable for approximate positioning, such as locating a constant home location or for locating known coordinates of areas of rough terrain. 
+\end{itemize}
+
 \subsection{Concept Choice}
+For local positioning, six pairs ultrasonic sensors will be used on the robot: two pairs of sensors will be on the left and right sides, and a single pair of sensors will be on the front and back. Alignment and distance from the perimeter wall will be determined from this sensor setup. This setup also provides redundancy if some of the sensors fail. The applicable pairs of sensors will have plausibility checks to determine if the system is functioning properly. If the system fails plausibility checks, the robot will shut down and require human intervention.
+
+For global positioning, a GNSS module will be used to provide latitude and longitude coordinates. When the system is initially called upon to initiate work, the GNSS will guide the robot to its home location. From its home location, the robot will be able to rely upon the ultrasonic sensors to navigate along the perimeter wall. The GNSS will also play a role in pyramid location which will be discussed later. 
+
 \subsection{Concept Model}
+\begin{figure}[htb!]
+\begin{center}
+\includegraphics[scale=0.75]{Figures/simulink_ultrasonic}
+\caption{Ultrasonic Sensor Model}
+\includegraphics[scale=0.75]{Figures/simulink_globalpos}
+\caption{Global Position Sensor Model}
+\end{center}
+\end{figure}
+
 \subsection{Discussion}
 
 \section{Tesseract Detection}
 \subsection{Concept Generation}
+Since the tesseract emits a strong magnetic field. A magnetic sensor mounted on the tesseract intake can be used to detect its presence. 1-axis hall-effect sensors could be used, or a 3-axis magnetometer could be used by taking the magnitude of the 3 axes.
+
+The system could sweep the entire perimeter and catch the tesseract in a chute which could trip a limit switch.
+
+A limit switch could be used on the tesseract intake which would trigger when the tesseract is within grabbing distance. A magnetic Reed switch could be used as an alternative to the limit switch.
+
 \subsection{Concept Selection}
+The Hall Effect sensor is a standard sensor which excels in proximity sensing, position, speed detection and current sensing applications. However, hall effect sensor has a lower measuring accuracy and sensitivity—which is an important factor for improving the robot’s functionality—and the output signal tends to drift. For these reasons, it is unacceptable as a sensor to find the tesseract.
+The reed switch was also an unideal option, as it relies on physical contact. This means that the range and sensitivity are extremely low, as well as only returning a binary value. Additionally, the life expectancy is lower due to the mechanical nature of the sensor.
+A vector-based magnetometer is the best sensor for finding the tesseract. This sensor delivers a high level of sensitivity and dynamic range. Additionally, noise and temperature drift are kept low. 
+
 \subsection{Concept Choice}
-\subsection{Concept Model}
+A contactless method of detecting the tesseract cube is prefered.as this reduces wear and tear on the system and can increase the operating speed. Magnetometers provide a solid contactless method of measuring the magnetic field at a given point. Since the magnetic field of the Tesseract is approximately 800 mT, which is comparable to an MRI machine, the magnetometer should not have any difficulty distinguishing between the earth’s magnetic field or other nearby magnetic fields such as motors.
+\subsection{Concept Model}\begin{figure}[htb!]
+\begin{center}
+\includegraphics[scale=0.75]{Figures/simulink_tesseract}
+\caption{Infrared Sensor Model}
+\end{center}
+\end{figure}
+\FloatBarrier
 \subsection{Discussion}
 
 \section{Pyramid Detection}
@@ -73,6 +116,13 @@ GNSS systems can be implemented to give the system latitude, longitude, and alti
 \subsection{Concept Selection}
 \subsection{Concept Choice}
 \subsection{Concept Model}
+\begin{figure}[htb!]
+\begin{center}
+\includegraphics[scale=0.75]{Figures/simulink_pyramid}
+\caption{Infrared Sensor Model}
+\end{center}
+\end{figure}
+\FloatBarrier
 \subsection{Discussion}
 
 

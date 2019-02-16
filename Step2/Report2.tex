@@ -145,12 +145,13 @@ For global positioning, a GNSS module will be used to provide latitude and longi
 
 
 \subsection{Concept Selection}
-The Hall Effect sensor is a standard sensor which excels in proximity sensing, position, speed detection and current sensing applications. However, hall effect sensor has a lower measuring accuracy and sensitivity—which is an important factor for improving the robot’s functionality—and the output signal tends to drift. For these reasons, it is unacceptable as a sensor to find the tesseract.
+The Hall Effect sensor is a standard sensor which excels in proximity sensing, position, speed detection and current sensing applications. However, hall effect sensors have lower measuring accuracy and sensitivity—which is an important factor for improving the robot’s functionality—and the output signal tends to drift. For these reasons, it is unacceptable as a sensor to find the tesseract.
 The reed switch was also an unideal option, as it relies on physical contact. This means that the range and sensitivity are extremely low, as well as only returning a binary value. Additionally, the life expectancy is lower due to the mechanical nature of the sensor.
 A vector-based magnetometer is the best sensor for finding the tesseract. This sensor delivers a high level of sensitivity and dynamic range. Additionally, noise and temperature drift are kept low. 
 
 \subsection{Concept Choice}
-A contactless method of detecting the tesseract cube is prefered.as this reduces wear and tear on the system and can increase the operating speed. Magnetometers provide a solid contactless method of measuring the magnetic field at a given point. Since the magnetic field of the Tesseract is approximately 800 mT, which is comparable to an MRI machine, the magnetometer should not have any difficulty distinguishing between the earth’s magnetic field or other nearby magnetic fields such as motors.
+A contactless method of detecting the tesseract cube is prefered.as this reduces wear and tear on the system and can increase the operating speed. Since the magnetic field of the Tesseract is approximately 800 mT, which is comparable to an MRI machine, the magnetometer should not have any difficulty distinguishing between the earth’s magnetic field or other nearby magnetic fields such as motors.
+
 \subsection{Concept Model}\begin{figure}[htb!]
 \begin{center}
 \caption{Infrared Sensor Model}

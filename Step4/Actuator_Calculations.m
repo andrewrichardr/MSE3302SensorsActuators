@@ -21,7 +21,7 @@ F_normal = mass*g;
 friction = F_normal*mu_friction_rolling;
 
 %other
-efficiency = 0.90;   %gear efficiency of 
+efficiency = 0.90;   %gear efficiency of 55
 Mg = 30;         %gear ratio (output:input)
 vf = 3; %linear speed (m/s)
 t_final = 15; %time to reach max speed

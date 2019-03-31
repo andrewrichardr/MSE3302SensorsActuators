@@ -14,7 +14,7 @@
 %syms 
 %friction
 mu_friction = 0.8;  %coeff of friction
-mu_friction_rolling = 0.0; %coeff of friction rolling tank tread similar to car tire on concrete
+mu_friction_rolling = 0.01; %coeff of friction rolling tank tread similar to car tire on concrete
 g = 9.81;   %acceleration due to gravity (m/s^2)
 mass = 30E3/2; %estimated mass of 30 000 (kg /2 for half of vehicle
 F_normal = mass*g;
@@ -25,7 +25,7 @@ efficiency = 0.90;   %gear efficiency of
 Mg = 30;         %gear ratio (output:input)
 vf = 3; %linear speed (m/s)
 t_final = 15; %time to reach max speed
-r_tread = 0.2; %tank tread radius (m/s)
+r_tread = 0.25; %tank tread radius (m/s)
 r_center_of_gravity = 1.92;  %distance from center of wheel to COG (m)
 omega_out = vf/r_tread; %angular velocity (rad/s)
 omega_in = omega_out*Mg;     %angular velocity of motor (rad/s)

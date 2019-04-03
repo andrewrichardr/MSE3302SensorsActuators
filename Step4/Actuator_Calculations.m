@@ -30,6 +30,7 @@ r_center_of_gravity = 1.92;  %distance from center of wheel to COG (m)
 omega_out = vf/r_tread; %angular velocity (rad/s)
 omega_in = omega_out*Mg;     %angular velocity of motor (rad/s)
 alpha = omega_out/t_final;
+motor_rpm = omega_in*(60/2*pi)
 
 %power
 P_out = (friction + 3.33333E3)*3;%10E3;   %output power (W)
@@ -49,3 +50,4 @@ T_in = J_eff*alpha + T_out/(Mg*efficiency);
 
 %power required from 1 emrax
 P_in = T_in*omega_in
+
